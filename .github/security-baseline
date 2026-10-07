@@ -1,0 +1,7 @@
+# Security scan baseline (keel-linux/.github, security-scan.yml): findings
+# that were read and are not a risk, one per line, the fingerprint and why.
+shellcheck:SC1083:overlay/usr/lib/inithooks/bin/ejabberd.sh:8db519bec73e shell lint, not a security risk: literal brace
+shellcheck:SC1090:overlay/usr/lib/inithooks/firstboot.d/40ejabberd:c57db62f520d shell lint, not a security risk: a sourced file whose path is computed, shellcheck cannot follow it
+shellcheck:SC2046:conf.d/main:897b00e6dbac shell lint, not a security risk: unquoted command substitution over values the script itself produces
+shellcheck:SC2046:conf.d/main:fd1b1326ec8e shell lint, not a security risk: unquoted command substitution over values the script itself produces
+shellcheck:SC2115:conf.d/main:1348a7b17123 shell lint, not a security risk: rm -rf of a path built from variables the build sets, never empty in practice
